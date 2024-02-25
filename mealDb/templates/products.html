@@ -1,0 +1,19 @@
+{% extends "base.html" %} {% block content %}
+<h1>OUR FOOD LIST</h1>
+
+<div class="d-flex flex-wrap row row-cols-1 row-cols-md-3 g-4 mt-2">
+  {% for meal in meals%}
+  <div>
+    <img
+      class="img-fluid w-75 rounded mb-2"
+      src="{{meal.strMealThumb}}"
+      alt=""
+    />
+    <h3>{{meal.strMeal}}</h3>
+
+    <button type="button" class="btn btn-success">Order Now</button>
+  </div>
+  {% endfor %}
+</div>
+
+{% endblock %}
